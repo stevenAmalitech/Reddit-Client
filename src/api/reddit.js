@@ -1,8 +1,18 @@
-const baseUrl = "https://www.reddit.com";
+const baseUrl = "https://www.reddit.com/";
 
-export async function getPosts(string) {
+export function getAllRedditPosts() {
+  return getPosts("r/all.json");
+}
+
+export function searchReddit(string) {
+  if (string === "") return getAllRedditPosts();
+
+  return getPosts(`search.json?q=${string.trim()}`);
+}
+
+async function getPosts(string) {
   try {
-    const response = await fetch(baseUrl + string + ".json");
+    const response = await fetch(baseUrl + string);
 
     if (!response.ok) throw Error("fetch error");
 

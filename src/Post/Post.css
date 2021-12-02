@@ -1,0 +1,117 @@
+.post {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 640px;
+  margin-bottom: 10px;
+  background-color: #161617;
+  border: 1px solid #343536;
+  border-radius: 4px;
+  /* display: flex; */
+  padding: 15px;
+  color: inherit;
+}
+
+.post__other {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #818384;
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+}
+
+.post__other > div {
+  margin-right: 16px;
+}
+
+.post .title {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #d7dadc;
+  margin-bottom: 1rem;
+  text-decoration: none !important;
+}
+
+.post .meta {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+
+.post .meta span {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.post .subreddit__name {
+  color: #d7dadc;
+  font-weight: 500;
+}
+
+.post .author {
+  color: #818384;
+}
+
+.post__media {
+  display: flex;
+  justify-content: center;
+  font-size: 0.87em;
+  line-height: 1.3152em;
+  color: #d7dadc;
+  white-space: pre-line;
+}
+
+.post__media > * {
+  max-height: 512px !important;
+  max-width: 100% !important ;
+  overflow: hidden;
+}
+
+/* .post__media--text {
+
+
+} */
+
+.post__media--text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 19;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* .post__media--richVid iframe {
+} */
+
+.post__media--img img {
+  object-fit: contain;
+}
+
+/* .post__media--video video {
+} */
+
+.post__media--link--text {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.post__media--link--text > div {
+  width: auto;
+}
+
+.post__media--link--text a {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 1.3em;
+  line-break: strict;
+  max-width: 45ch;
+}
+
+.post__media--link--text img {
+  height: 100px;
+  width: 144px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 16px;
+}

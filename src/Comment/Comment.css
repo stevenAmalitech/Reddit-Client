@@ -19,6 +19,10 @@
   font-size: 0.9em;
 }
 
+.comment__text a {
+  color: #4fbcff;
+}
+
 #back {
   padding: 16px 0;
   margin: 8px auto 24px;

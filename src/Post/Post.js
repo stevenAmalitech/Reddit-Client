@@ -18,11 +18,19 @@ export default class Post extends Component {
     return "/comments?url=" + this.props.post.commentUrl;
   }
 
+  className() {
+    return this.props.onClick ? "post " : "post not-link";
+  }
+
   render() {
     const { post } = this.props;
 
+    {
+      console.log(this.className());
+    }
+
     return (
-      <article className="post" onClick={this.handleClick}>
+      <article className={this.className()} onClick={this.handleClick}>
         {this.state.clicked && <Navigate to={this.commentUrl()} />}
         <div className="meta">
           <span className="subreddit__name">{post.subredditName}</span>

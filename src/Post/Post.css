@@ -12,6 +12,10 @@
   cursor: pointer;
 }
 
+.post.not-link{
+  cursor: default;
+}
+
 .post__other {
   font-size: 0.8em;
   font-weight: bold;

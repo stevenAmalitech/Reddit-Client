@@ -37,6 +37,8 @@ export default class App extends Component {
     posts = await formatPostData(posts);
 
     this.setState({ posts });
+
+    document.title = "Reddit Client"
   }
 
   async search(e) {

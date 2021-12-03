@@ -39,6 +39,8 @@ export default class Comment extends Component {
     const [post, comments] = await formatCommentData(data);
 
     this.setState({ post: post[0], comments, loaded: true });
+
+    document.title = this.state.post.title;
   }
 
   commentUrl() {

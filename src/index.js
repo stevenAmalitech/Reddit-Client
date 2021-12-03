@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import App from "./App/App";
+import Comment from "./Comment/Comment"
 import store from "./Store/store"
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
@@ -13,6 +14,7 @@ ReactDOM.render(
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<App />}></Route>
+          <Route path="/comments" element={<Comment />}></Route>
         </Routes>
       </Provider>
     </React.StrictMode>

@@ -3,6 +3,7 @@ import "./App.css";
 import Post from "../Post/Post";
 import Search from "../Search/Search";
 import { getAllRedditPosts, searchReddit } from "../api/reddit";
+import { formatPostData } from "../utils";
 
 export default class App extends Component {
   constructor(props) {
@@ -25,14 +26,15 @@ export default class App extends Component {
           onChange={this.searchInputOnChange}
         />
         {this.state.posts.map((post) => (
-          <Post key={post.name} post={post} />
+          <Post key={post.name} post={post} onClick={true} />
         ))}
       </div>
     );
   }
 
   async componentDidMount() {
-    const posts = await getAllRedditPosts("r/all");
+    let posts = await getAllRedditPosts();
+    posts = await formatPostData(posts);
 
     this.setState({ posts });
   }
@@ -41,18 +43,12 @@ export default class App extends Component {
     e.preventDefault();
     this.setState({ posts: [] });
 
-    const posts = await searchReddit(this.state.searchTerm);
+    let posts = await searchReddit(this.state.searchTerm);
+    posts = await formatPostData(posts)
     this.setState({ posts });
   }
 
   searchInputOnChange(e) {
     this.setState({ searchTerm: e.target.value });
-  }
-
-  getQuery() {
-    const search = window.location.search;
-    const params = new URLSearchParams(search);
-
-    console.log(params.get("q"));
   }
 }

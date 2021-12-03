@@ -3,7 +3,7 @@ import { getPostComment } from "../api/reddit";
 import Post from "../Post/Post";
 import { formatCommentData } from "../utils";
 import ReactMarkdown from "react-markdown";
-import "./Comment.css"
+import "./Comment.css";
 
 export default class Comment extends Component {
   constructor(props) {
@@ -13,6 +13,9 @@ export default class Comment extends Component {
   render() {
     return (
       <div className="contents ">
+        <button id="back" onClick={() => window.history.back()}>
+          Go back
+        </button>
         {this.state.loaded && <Post post={this.state.post} />}
         {this.state.loaded &&
           this.state.comments.map((comment) => {

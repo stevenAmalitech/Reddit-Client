@@ -12,11 +12,9 @@
   cursor: pointer;
   overflow: hidden;
   overflow-wrap: break-word;
-
-
 }
 
-.post.not-link{
+.post.not-link {
   cursor: default;
 }
 
@@ -69,7 +67,6 @@
   color: #d7dadc;
   white-space: pre-line;
   overflow-wrap: break-word;
-
 }
 
 .post__media > * {
@@ -102,10 +99,10 @@
 
 .post__media--link--text {
   display: grid;
-grid-template-rows: 1fr;
-grid-template-columns: auto 1fr;
-align-items: center;}
-
+  grid-template-rows: 1fr;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
 
 /* .post__media--link--text > div {
   width: auto;
@@ -122,6 +119,7 @@ align-items: center;}
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+  color: #4fbcff;
 }
 
 .post__media--link--text img {

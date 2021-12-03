@@ -12,3 +12,9 @@ body {
   background: #000;
   color: white;
 }
+
+.contents{
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}

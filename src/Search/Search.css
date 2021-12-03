@@ -4,7 +4,13 @@ nav {
   padding: 7px 20px;
 }
 
-#logo{
+@media screen and (max-width: 640px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+#logo {
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -12,21 +18,21 @@ nav {
   color: white;
 }
 
-#logo__icon{
+#logo__icon {
   color: pink;
   margin-right: 8px;
   font-size: 2rem;
 }
 
-#logo span{
+#logo span {
   color: pink;
 }
 
-#search{
+#search {
   margin: auto;
 }
 
-#search input{
+#search input {
   appearance: none;
   background: #272729;
   color: #d7dadc;
@@ -36,5 +42,4 @@ nav {
   margin-right: 8px;
   border-radius: 4px;
   outline: none;
-
 }
